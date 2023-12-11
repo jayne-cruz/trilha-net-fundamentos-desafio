@@ -35,4 +35,27 @@ Por último, deverá ser feito um menu interativo com as seguintes ações imple
 
 
 ## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+A implementação do sistema de estacionamento foi realizada seguindo os requisitos especificados. Abaixo está um resumo das soluções implementadas para cada método da classe `Estacionamento`:
+
+### AdicionarVeiculo
+
+*   **Descrição**: Este método é responsável por adicionar um novo veículo ao estacionamento. Ele solicita ao usuário para digitar a placa do veículo e armazena essa informação na lista `veiculos`.
+*   **Implementação**: Utilizei `Console.ReadLine()` para capturar a entrada do usuário e `veiculos.Add(placa)` para adicionar a placa à lista de veículos.
+
+### RemoverVeiculo
+
+*   **Descrição**: Este método remove um veículo do estacionamento. Primeiro, verifica se a placa digitada pelo usuário corresponde a um veículo estacionado. Se o veículo estiver presente, pede ao usuário para informar a quantidade de horas que o veículo permaneceu estacionado e calcula o valor total a ser cobrado.
+*   **Implementação**: Utilizei `veiculos.Any(x => x.ToUpper() == placa.ToUpper())` para verificar a existência do veículo e `veiculos.Remove(placa)` para removê-lo da lista após o cálculo do valor total.
+
+### ListarVeiculos
+
+*   **Descrição**: Este método lista todos os veículos atualmente estacionados. Se não houver veículos, exibe uma mensagem indicando que o estacionamento está vazio.
+*   **Implementação**: Implementei um loop `foreach` para percorrer a lista `veiculos` e exibir cada placa, usando `Console.WriteLine()` para mostrar as informações no console.
+
+### Menu Interativo
+
+*   **Descrição**: O programa oferece um menu interativo que permite ao usuário escolher entre cadastrar, remover ou listar veículos, além de encerrar o programa.
+*   **Implementação**: Usei um loop `while` junto com uma estrutura `switch` para processar a entrada do usuário e chamar os métodos correspondentes da classe `Estacionamento`.
+
+Ao final, essas implementações garantem que o sistema de estacionamento funcione de acordo com os requisitos do desafio, permitindo gerenciar eficientemente os veículos estacionados.
+
