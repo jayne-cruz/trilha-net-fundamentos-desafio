@@ -3,7 +3,7 @@ namespace DesafioFundamentos.Models
     // Define a classe Estacionamento no namespace DesafioFundamentos.Models
     public class Estacionamento
     {
-        // Variável onde ficam os preços e listas de veículos
+        // Variáveis onde ficam os preços e listas de veículos
         private decimal precoInicial = 0;
         private decimal precoPorHora = 0;
         private List<string> veiculos = new List<string>();
