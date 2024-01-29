@@ -8,7 +8,7 @@ namespace DesafioFundamentos.Models
         private decimal precoPorHora = 0;
         private List<string> veiculos = new List<string>();
 
-        // Método que recebe os preços iniciais como parâmetros
+        // Construtor que recebe os preços iniciais
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
             // Método que adiciona os preços iniciais às variáveis
